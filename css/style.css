@@ -1,0 +1,662 @@
+@font-face {
+    font-family: "ClashDisplay";
+    src: url(../fonts/ClashDisplay-Light.woff2);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "ClashDisplay";
+    src: url(../fonts/ClashDisplay-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "ClashDisplay";
+    src: url(../fonts/ClashDisplay-Semibold.woff2);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "ClashDisplay";
+    src: url(../fonts/ClashDisplay-Bold.woff2);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url(../fonts/Satoshi-Regular.woff2);
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-white: #fff;
+    --color-black: #000000;
+    --color-lite-gray: #f9f9f9;
+    --color-dark-primary: #2a2548;
+    --color-nav-links: #726e8d;
+    --font-clash-display:"ClashDisplay"
+}
+
+.btn{
+    text-decoration: none;
+    color: var(--color-dark-primary);
+    background-color: var(--color-lite-gray);
+    padding: 16px 32px;
+    font-family: "Satoshi";
+    font-size: 16px;
+}
+
+.btn:hover{
+    transition: all 0.8s;
+    color: var(--color-lite-gray);
+    background-color: var(--color-dark-primary);
+}
+
+h2{ 
+    font-family: "ClashDisplay";
+    font-weight: normal;
+    font-size: 30px;
+}
+    
+.offset{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.7;
+    background-color: gray;
+    z-index: 1000;
+}
+
+.offset nav ul{
+    padding-top: 60px;
+    display: grid;
+    justify-items: center;
+    list-style-type: none;
+    row-gap: 20px;
+}
+
+.offset nav ul a{
+    font-family: var(--font-clash-display);
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.offset ul a:hover{
+    color: var(--color-dark-primary);
+}
+
+.offset nav{
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    padding: 20px;
+}
+
+.offset nav svg{
+    color: var(--color-white);
+    height: 100%;
+    justify-self: end;
+}
+
+body>header{
+    display: grid;
+    row-gap: 20px;
+    padding: 0 2vw;
+    padding: 20px 2vw;
+}
+
+header>div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 16px;
+}
+
+header div.burger svg:last-child{
+    display: none;
+}
+
+header>div span{
+    font-family: "ClashDisplay";
+    justify-self: center;
+    font-size: 24px;
+}
+
+header>div div.icons{
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1vw;
+
+}
+
+header>div svg{
+    height: 16px;
+    color: var(--color-black);
+}
+
+header nav{
+    justify-self: center;
+}
+
+header nav ul{
+    justify-self: center;
+    display: flex;
+    column-gap: 4vw;
+    list-style: none;
+}
+
+header nav ul a{
+    text-decoration: none;
+    color: var(--color-nav-links);
+    font-family: "Satoshi";
+    font-size: 16px;
+}
+
+header nav ul a:hover{
+    color: var(--color-black);
+    cursor: pointer;
+    transform: all 0.7s;
+}
+
+main section.header{
+    position: relative;
+    display: grid;
+    grid-template-rows: 44vw;
+}
+
+main section.header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main section.header div{
+    position: absolute;
+    right: 8vw;
+    top: 6vw;
+    grid-template-columns: 30vw;
+    bottom: 8vw;
+    display: grid;
+    row-gap: 20px;
+    background-color: var(--color-white);
+    grid-template-rows: max-content;
+    padding: 5vw;
+    
+}
+
+main section.header h1{
+    font-family: "Satoshi";
+    font-size: 32px;
+    font-weight: 400;
+}
+
+main section.header div span{
+    font-family: "Satoshi";
+    font-size: 18px;
+}
+
+main section.header div a{
+    align-self: end;
+    justify-self: start;
+}
+
+main section.our-brand{
+    padding: 80px 6vw;
+    display: grid;
+    row-gap: 36px;
+    padding-bottom: 40px;
+}
+
+main section.our-brand h2{
+    font-family: "ClashDisplay";
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+}
+
+main section.our-brand div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2vw;
+}
+
+main section.our-brand div article{
+    display: grid;
+    grid-template-rows: 24px repeat(2, 1fr);
+    row-gap: 12px;
+    background-color: var(--color-lite-gray);
+    padding: 48px;
+}
+
+main section.our-brand div article svg{
+    height: 100%;
+}
+
+main section.our-brand div article h3{
+    font-family: "ClashDisplay";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+main section.our-brand div article p{
+    font-family: "Satoshi";
+}
+
+main section.new-tovar{
+    padding: 80px;
+    display: grid;
+    row-gap: 36px;
+
+}
+
+main section.new-tovar div{
+    display: grid;
+    column-gap: 2vw;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+main section.new-tovar div article{
+    display: grid;
+    row-gap: 24px;
+    grid-template-rows: 305px 1fr;
+}
+
+main section.new-tovar div article:hover{
+    transform: scale(1.05);
+    transition: all 0.8s;
+}
+
+main section.new-tovar div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main section.new-tovar div p{
+    font-family: "ClashDisplay";
+    font-size: 20px;
+    font-weight: 400;
+    display: grid;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+
+main section.new-tovar div p span{
+    font-family: "Satoshi";
+}
+
+main section.new-tovar a{
+    justify-self: center;
+}
+
+main section.started{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 36vw;
+    column-gap: 16px;
+    padding: 60px 6vw;
+}
+
+main section.started img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main section.started div{
+    display: grid;
+    background-color: var(--color-dark-primary);
+    padding: 5vw;
+    color: var(--color-white);
+    grid-template-rows: max-content;
+    row-gap: 12px;
+}
+
+main section.started div a{
+    align-self: end;
+    justify-self: start;
+    background-color: var(--color-nav-links);
+}
+
+main section.started div h2{
+    font-family: "ClashDisplay";
+    font-weight: normal;
+    font-size: 30px;
+}
+
+main section.started div span{
+    font-family: "Satoshi";
+    font-weight: normal;
+    font-size: 18px;
+}
+
+main section.form{
+    display: grid;
+    row-gap: 30px;
+    justify-items: center;
+    background-color: var(--color-dark-primary);
+    color: var(--color-white);
+    padding: 80px 0;
+    background-image: url(../images/baac.jpg);
+    background-size: cover;
+    background-position: 0% 50%;
+    color: var(--color-white);
+    padding: 80px 0;
+
+}
+
+main section.form p{
+    font-family: "Satoshi";
+    font-weight: normal;
+    font-size: 18px;
+    width: 40vw;
+    text-align: center;
+
+}
+
+main section.form ul{
+    display: flex;
+    column-gap: 36px;
+}
+
+main section.form ul li{
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    align-items: center;
+    column-gap: 4px;
+    font-family: "Satoshi";
+    font-weight: normal;
+    font-size: 16px;
+
+}
+
+main section.form form{
+    display: grid;
+    grid-template-rows: 56px;
+    grid-template-columns: 3fr 1fr;
+}
+
+main section.form form input{
+    border-radius: 0;
+    border: none;
+    padding-left: 3vw;
+}
+
+main section.form form input[type=submit]{
+    color: var(--color-white);
+    background-color: var(--color-dark-primary);
+    padding: 0 32px;
+}
+
+body>footer{
+    display: grid;
+    row-gap: 24px;
+    padding: 60px 6vw 24px 6vw ;
+    background-color: var(--color-dark-primary);
+    color: var(--color-white);
+}
+
+body>footer ul{
+    list-style-type: none;
+    font-family: "Satoshi";
+    font-weight: normal;
+    font-size: 14px;
+}
+
+body>footer a{
+    text-decoration: none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+footer header ul li.gl{
+    font-family: "ClashDisplay";
+    font-weight: normal;
+    font-size: 16px;
+}
+
+footer header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    border-bottom: 1px solid var(--color-nav-links);
+    padding-bottom: 48px;
+    align-items: start;
+}
+
+footer header ul{
+    display: grid;
+    row-gap: 12px;
+}
+
+footer footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+footer footer span{
+    justify-self: start;
+    font-family: Satoshi;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+footer footer ul{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 24px;
+    justify-items: end;
+    justify-self: end;
+    column-gap: 24px;
+}
+
+footer footer ul svg{
+    height: 100%;
+    color: var(--color-white);
+}
+
+footer header form  input:nth-child(1){
+    border-radius: 0;
+    border: none;
+    padding-left: 3vw;
+    background-color: var(--color-nav-links);
+}
+
+footer header form  input{
+    font-family: "Satoshi";
+    font-weight: normal;
+    font-size: 16px;
+}
+
+footer header form  input::placeholder{
+    color: var(--color-white);
+}
+
+footer header form[type="submit"]{
+    color: var(--color-white);
+    background-color: var(--color-dark-primary);
+    padding: 0 32px;
+}
+
+footer header form div{
+    display: grid;
+    grid-template-rows: 56px;
+    grid-template-columns: 3fr 1fr;
+    
+}
+
+footer form h4{
+    font-family: "ClashDisplay";
+    font-weight: normal;
+    font-size: 16px;
+}
+
+footer header form div{
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 390px){
+    header>div {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    header hr, header nav, header div.icons svg{
+        display: none;
+    }
+
+    header>div span{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-self: start;
+    }
+
+    header>div svg{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        justify-self: end;
+    }
+
+    header div.burger svg:last-child{
+        display: block;
+    }
+
+    header>div div.burger{
+        display: flex;
+        justify-self: end;
+        column-gap: 20px;
+        
+    }
+
+    main section.header div{
+        position: static;
+        top: 0;
+        range: 0;
+        left: 0;
+        bottom: 0;
+        grid-template-columns: 1fr;
+        grid-row: 1/2;
+    }
+
+    main section.header img{
+        grid-row: 2/3;
+    }
+
+    main section.header{
+        grid-template-rows: max-content;
+    }
+
+    main section.header div h1{
+        font-size: 24px;
+    }
+
+    main section.header div span{
+        font-size: 16px;
+    }
+
+    main section.header div a{
+        justify-self: center;
+        width: 100%;
+    }
+
+    main section.our-brand h2{
+        font-size: 20px;
+        text-align-last: left;
+    }
+
+    main section.our-brand div{
+        grid-template-columns: 1fr;
+        row-gap: 26px;
+    }
+
+    main section.new-tovar div{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+
+    main section.new-tovar div article{
+        grid-template-rows: 163px 1fr;
+    }
+
+    main section.new-tovar a{
+        width: 100%;
+        text-align: center;
+    }
+
+    main section.started{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
+        row-gap: 24px;
+    }
+
+    main section.started h2{
+        font-size: 20px;
+    }
+
+    main section.started div{
+        row-gap: 30px;
+    }
+
+    main section.started div span {
+        font-size: 14px;
+    }
+
+    main section.started div a{
+        width: 100%;
+        text-align: center;
+    }
+
+    main section.form{
+        padding: 20px;
+        justify-items: flex-start;
+    }
+
+    main section.form h2{
+        font-size: 24px;
+    }
+
+    main section.form p{
+        font-size: 14px;
+        text-align: left;
+        width: 100%;
+    }
+
+    main section.form ul{
+        flex-direction: column;
+        row-gap: 8px;
+    }
+
+    footer header{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 12px;
+    }
+
+    footer header form{
+        grid-row: 3/4;
+        grid-column: 1/3;
+    }
+
+    footer footer{
+        grid-template-columns: 1fr;
+    }
+
+    footer footer ul{
+        display: none;
+    }
+
+    footer footer span{
+        justify-self: center;
+    }
+}
+
+ 
