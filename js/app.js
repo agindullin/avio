@@ -5,7 +5,6 @@ const burger = () => {
     const close = document.querySelector('.offset nav svg')
     btn.addEventListener('click', () => {
         off.style.display = 'block'
-        console.log(btn)
     })
     close.addEventListener('click', () => {
         off.style.display = 'none'
